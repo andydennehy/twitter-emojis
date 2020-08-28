@@ -3,6 +3,7 @@ import time
 import tweepy
 import json
 import numpy as np
+import os
 import preprocessor as p
 
 # Emoji libraries. Requires pyTorch == 1.0.1
@@ -13,10 +14,10 @@ from bot.torchMoji.torchmoji.model_def import torchmoji_emojis
 from bot.torchMoji.torchmoji.global_variables import PRETRAINED_PATH, VOCAB_PATH
 
 
-consumer_key = "WgSo3wOcvsGy2LV0J7iSX1wxl"
-consumer_secret = "D4jle6urav2P2RJiw5yj1UqcbYoPeJnb2JqHmKfJECbwSHWtzP"
-access_token = "1258296496782487552-E3hsSRQzIsEuhmORifiOiSvaeoGyho"
-access_token_secret = "z9k6dK94ZlRKCRy86zgEch5dBdz9m7NG0tWKcSkCaPss2"
+consumer_key = os.getenv("consumer_key")
+consumer_secret = os.getenv("consumer_secret")
+access_token = os.getenv("access_token")
+access_token_secret = os.getenv("access_token_secret")
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
