@@ -13,7 +13,6 @@ from bot.torchMoji.torchmoji.sentence_tokenizer import SentenceTokenizer
 from bot.torchMoji.torchmoji.model_def import torchmoji_emojis
 from bot.torchMoji.torchmoji.global_variables import PRETRAINED_PATH, VOCAB_PATH
 
-
 consumer_key = os.getenv("consumer_key")
 consumer_secret = os.getenv("consumer_secret")
 access_token = os.getenv("access_token")
